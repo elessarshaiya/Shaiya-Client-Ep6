@@ -1,5 +1,9 @@
 # Client DLL
 
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I71XH0X6)
+
+
 # For Essiantals Game.exe
 
 * New Resolutions
@@ -21,4 +25,3 @@
 2. Select **Release** and **Win32/x86** configurations.
 
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I71XH0X6)
