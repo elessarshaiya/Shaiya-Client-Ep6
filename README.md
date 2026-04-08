@@ -19,3 +19,6 @@
 ## Build
 1. Open this folder in Visual Studio (`Client.sln`).
 2. Select **Release** and **Win32/x86** configurations.
+
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I71XH0X6)
