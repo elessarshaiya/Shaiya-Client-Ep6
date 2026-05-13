@@ -1,16 +1,16 @@
-#include <hook.h>
+#include "hook.h"
 
 
-const char* login_ip_addr = ("127.0.0.1");
+const char* login_ip_addr = AY_OBFUSCATE("127.0.0.1"); // It hides the IP address inside the DLL.
 auto login_ip_addr_format = "%s";
 
-DWORD write_login_ip_addr_retn = 0x4093D4;
+DWORD write_login_ip_addr_retn = 0x409654;
 _declspec(naked) void write_login_ip_addr()
 {
 	_asm {
 		push login_ip_addr
 		push login_ip_addr_format
-		push 0x7C0DD0
+		push 0x7FE290 // ip string formatted
 		call sprintf
 		add esp, 12
 		jmp write_login_ip_addr_retn
@@ -20,7 +20,7 @@ _declspec(naked) void write_login_ip_addr()
 _declspec(naked) void select_server_packet()
 {
 	_asm {
-		mov eax, 0xA771
+		mov eax, 0x0A301
 	}
 }
 
@@ -38,12 +38,14 @@ _declspec(naked) void login_port()
 	}
 }
 
-void Network() {
-	utils::Hook((LPVOID)0x4092D2, write_login_ip_addr, 5);
-	utils::MemWrite((LPVOID)0x5EC71F, select_server_packet, 5);
-	utils::MemWrite((LPVOID)0x50C7A9, game_port, 5);
-	utils::MemWrite((LPVOID)0x40AD62, login_port, 5);
-	utils::MemWrite((LPVOID)0x48BE9E, login_port, 5);
-	utils::MemWrite((LPVOID)0x4D4C48, login_port, 5);
+void NETWORK() {
+	utils::Hook((LPVOID)0x409552, write_login_ip_addr, 5);
+	//utils::MemWrite((LPVOID)0x60C50F, select_server_packet, 5);
+	utils::MemWrite((LPVOID)0x517F09, game_port, 5);
+	utils::MemWrite((LPVOID)0x43EFD0, game_port, 5);
+	utils::MemWrite((LPVOID)0x481A70, game_port, 5);
+	utils::MemWrite((LPVOID)0x40B172, login_port, 5);
+	utils::MemWrite((LPVOID)0x493A6E, login_port, 5);
+	utils::MemWrite((LPVOID)0x4DD1E8, login_port, 5);
 }
 

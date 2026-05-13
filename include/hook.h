@@ -6,6 +6,7 @@
 #include <cstring>
 #include <detours.h>
 #include <utils.h>
+#include "obfuscate.h"
 
 #define HOOK_ATTACH(realFnPtr, detourFn)  DetourAttach(reinterpret_cast<PVOID*>(realFnPtr), reinterpret_cast<PVOID>(detourFn))
 #define HOOK_DETACH(realFnPtr, detourFn)  DetourDetach(reinterpret_cast<PVOID*>(realFnPtr), reinterpret_cast<PVOID>(detourFn))
