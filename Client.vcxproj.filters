@@ -39,7 +39,7 @@
     <ClCompile Include="src\network.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\buffs.cpp">
+    <ClCompile Include="src\Icons.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Slots.cpp">

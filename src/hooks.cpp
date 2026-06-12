@@ -3,7 +3,7 @@
 
 
 void Itemmall();
-void Network();
+void NETWORK();
 void Buff_Icons();
 void Slots();
 void Load();
@@ -35,7 +35,7 @@ void StartHooks()
     DetourTransactionCommit();
     // Oyun içi inline patchler
     Itemmall();
-    Network();
+    //NETWORK();
     Buff_Icons();
     Slots();
     Load();
